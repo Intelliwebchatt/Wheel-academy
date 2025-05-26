@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shane's Custom Wheel Fitment Expert | RnR Tire Express Montgomery</title>
+    <meta name="description" content="Get expert wheel fitment advice from Shane Lockhart, Montgomery's premier wheel specialist. Free consultation tool powered by AI.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-text {
+            color: #ff6b35;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .logo-subtext {
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        .contact-info {
+            color: #fff;
+            text-align: right;
+        }
+        
+        .contact-info .phone {
+            color: #ff6b35;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23333" width="1200" height="600"/><circle fill="%23ff6b35" cx="200" cy="300" r="100" opacity="0.1"/><circle fill="%23ff6b35" cx="800" cy="150" r="150" opacity="0.1"/><circle fill="%23ff6b35" cx="1000" cy="400" r="120" opacity="0.1"/></svg>');
+            background-size: cover;
+            background-position: center;
+            padding: 4rem 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #ccc;
+        }
+        
+        .hero .cta {
+            font-size: 1.1rem;
+            color: #ff6b35;
+            font-weight: bold;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 3rem 0;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff6b35;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+        
+        /* Bot Section */
+        .bot-section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .bot-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .bot-section .description {
+            color: #ccc;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .bot-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            min-height: 600px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            position: relative;
+        }
+        
+        /* Pickaxe bot container styling */
+        #deployment-c7c2543a-d703-4644-b868-8525b128d000 {
+            width: 100%;
+            height: 100%;
+            min-height: 600px;
+        }
+        
+        /* Shane's Credentials */
+        .credentials {
+            background: rgba(255, 107, 53, 0.1);
+            padding: 3rem 0;
+            color: white;
+        }
+        
+        .credentials-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .credentials-text h2 {
+            color: #ff6b35;
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+        }
+        
+        .credentials-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+        
+        .credentials-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .credentials-list li:before {
+            content: "✓";
+            color: #ff6b35;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* RnR Services */
+        .services {
+            padding: 3rem 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .services h2 {
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .service-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+        
+        .service-item .icon {
+            font-size: 2rem;
+            color: #ff6b35;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 2rem 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer h3 {
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+        
+        .footer .contact-details {
+            color: #ccc;
+        }
+        
+        .footer .contact-details strong {
+            color: white;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .contact-info {
+                text-align: center;
+            }
+            
+            .bot-container {
+                margin: 1rem;
+                padding: 1rem;
+                min-height: 500px;
+            }
+        }
+        
+        /* Embed styles for Pickaxe bot */
+        .pickaxe-embed {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div>
+                        <div class="logo-text">Shane's Fitment Expert</div>
+                        <div class="logo-subtext">Powered by RnR Tire Express Montgomery</div>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="phone">📞 Contact Shane Today</div>
+                    <div>RnR Tire Express Montgomery, AL</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Get Perfect Wheel Fitment Advice</h1>
+            <p class="subtitle">Free AI-powered consultation from Montgomery's premier wheel fitment specialist</p>
+            <p class="cta">🔥 Start your consultation below and get expert recommendations in minutes!</p>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Instant Expert Analysis</h3>
+                    <p>Get professional fitment recommendations based on your exact vehicle specifications and goals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Technical Expertise</h3>
+                    <p>Comprehensive knowledge of bolt patterns, offsets, sizing, and clearance requirements.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Personalized Recommendations</h3>
+                    <p>Custom advice tailored to your vehicle, driving style, and aesthetic preferences.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Complete Summary for Shane</h3>
+                    <p>Get a detailed report to take directly to Shane for seamless professional service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bot Section -->
+    <section class="bot-section">
+        <div class="container">
+            <h2>Start Your Free Consultation</h2>
+            <p class="description">Chat with Shane's AI fitment assistant to get expert recommendations for your vehicle. This advanced tool uses Shane's years of experience to provide accurate, personalized advice.</p>
+            
+            <div class="bot-container">
+                <!-- Shane's Fitment Expert Bot -->
+                <div id="deployment-c7c2543a-d703-4644-b868-8525b128d000"></div>
+                <script src="https://studio.pickaxe.co/api/embed/bundle.js" defer></script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shane's Credentials -->
+    <section class="credentials">
+        <div class="container">
+            <div class="credentials-content">
+                <div class="credentials-text">
+                    <h2>Meet Shane Lockhart</h2>
+                    <p>Montgomery's premier wheel fitment specialist with nationwide recognition for his expertise and unique approach to custom wheel solutions.</p>
+                    
+                    <ul class="credentials-list">
+                        <li>Nationally recognized fitment expert</li>
+                        <li>Published fitment articles and advice</li>
+                        <li>Hundreds of successful custom builds</li>
+                        <li>Expert in all vehicle makes and models</li>
+                        <li>Specializes in complex fitment challenges</li>
+                        <li>Known for exceptional customer service</li>
+                    </ul>
+                </div>
+                <div class="credentials-visual">
+                    <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; text-align: center;">
+                        <h3 style="color: #ff6b35; margin-bottom: 1rem;">Why Choose Shane?</h3>
+                        <p style="margin-bottom: 1rem;">"I don't just sell wheels - I create the perfect setup for each customer's unique needs and goals."</p>
+                        <p style="font-style: italic; color: #ccc;">- Shane Lockhart, Fitment Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RnR Services -->
+    <section class="services">
+        <div class="container">
+            <h2>RnR Tire Express Montgomery Services</h2>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="icon">💰</div>
+                    <h4>6 Months Same as Cash</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">✅</div>
+                    <h4>No Credit Check</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">💳</div>
+                    <h4>Flexible Payment Plans</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">⚡</div>
+                    <h4>Same Day Installation</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">🔄</div>
+                    <h4>Lifetime Rotate & Balance</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">🛡️</div>
+                    <h4>Protection Plans</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">🚗</div>
+                    <h4>1 Year Roadside Assistance</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">🏆</div>
+                    <h4>Expert Installation</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <p><strong>RnR Tire Express Montgomery</strong></p>
+                        <p>Montgomery, Alabama</p>
+                        <p><strong>Ask for Shane Lockhart</strong></p>
+                        <p>Wheel Fitment Specialist</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <div class="contact-details">
+                        <p>Custom Wheel Fitments</p>
+                        <p>Professional Installation</p>
+                        <p>Expert Consultation</p>
+                        <p>Tire & Wheel Packages</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Why Choose Us</h3>
+                    <div class="contact-details">
+                        <p>Nationwide Expertise</p>
+                        <p>Perfect Fitment Guarantee</p>
+                        <p>Flexible Financing</p>
+                        <p>Lifetime Support</p>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.2); margin: 2rem 0;">
+            <p>&copy; 2025 Shane Lockhart Fitment Expert | RnR Tire Express Montgomery | All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
